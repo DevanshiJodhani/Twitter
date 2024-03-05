@@ -21,16 +21,16 @@ const Center = (props) => {
             return;
         }
 
-        switch(showModel) {
-            case "open" :
+        switch (showModel) {
+            case "open":
                 setShowModel("close");
                 break;
 
-            case "close" :
+            case "close":
                 setShowModel("open");
                 break;
 
-            default: 
+            default:
                 setShowModel("close");
                 break;
         }
@@ -49,7 +49,7 @@ const Center = (props) => {
                             <img src="/images/user.svg" alt="" />
                         )
                     }
-                    <button onClick={handleClick}>What is happening?!</button>
+                    <button onClick={handleClick} disabled={props.loading ? true : false}>What is happening?!</button>
                 </div>
                 <div>
                     <button>
@@ -75,8 +75,9 @@ const Center = (props) => {
                     </Btn>
                 </div>
             </ShareBox>
-            {/* {props.articles.lenth === 0 && <p>There are no articles</p>} */}
             <Content>
+                {props.loading && <img style={{ width: "50px", background: "transparent" }} src="./images/spin-loader.svg" alt="" />}
+
                 {props.articles.length > 0 && props.articles.map((article, key) => (
                     <Artical key={key}>
                         <SharedActor>
@@ -356,6 +357,7 @@ const mapStateToProps = (state) => {
     return {
         user: state.userState.user,
         articles: state.articleState.articles,
+        loading: state.articleState.loading,
     };
 };
 

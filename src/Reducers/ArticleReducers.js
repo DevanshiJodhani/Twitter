@@ -1,7 +1,8 @@
-import { GET_ARTICLES } from "../Actions/ActionType";
+import { GET_ARTICLES, SET_LOADING_STATUS } from "../Actions/ActionType";
 
 export const initState = {
     articles: [],
+    loading: false,
 };
 
 const ArticleReducers = (state = initState, action) => {
@@ -11,6 +12,11 @@ const ArticleReducers = (state = initState, action) => {
                 ...state,
                 articles: action.payload,
             };
+        case SET_LOADING_STATUS:
+            return {
+                ...state,
+                loading: action.status,
+            }
         default:
             return state;
     }
