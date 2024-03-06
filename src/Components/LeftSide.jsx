@@ -213,8 +213,8 @@ const SignOut = styled.div`
 
     @media (max-width: 768px) {
         top: 510px;
-        padding: 6px 6px;
-        width: 58px;
+        padding: 10px 10px;
+        width: 50px;
         a{
             font-size:12px;
         }
