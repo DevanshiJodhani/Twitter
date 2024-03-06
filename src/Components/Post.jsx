@@ -110,7 +110,7 @@ const Post = (props) => {
                                     <img src="./images/photo.png" alt="" />
                                 </AssetsButton>
                                 <AssetsButton onClick={() => switchAssetArea("media")}>
-                                    <img src="./images/gif.png" alt="" />
+                                    <img src="./images/video.png" alt="" />
                                 </AssetsButton>
                                 <AssetsButton>
                                     <img src="./images/poll.png" alt="" />
