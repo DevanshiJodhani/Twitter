@@ -64,7 +64,6 @@ const Post = (props) => {
                 <Container>
                     <Content>
                         <Header>
-                            <h2>Create a post</h2>
                             <button onClick={(e) => props.handleClick(e)}>
                                 <img src="./images/close.png" alt="" />
                             </button>
@@ -111,9 +110,6 @@ const Post = (props) => {
                                 </AssetsButton>
                                 <AssetsButton onClick={() => switchAssetArea("media")}>
                                     <img src="./images/video.png" alt="" />
-                                </AssetsButton>
-                                <AssetsButton>
-                                    <img src="./images/poll.png" alt="" />
                                 </AssetsButton>
                                 <AssetsButton>
                                     <img src="./images/smile.png" alt="" />
@@ -180,7 +176,7 @@ const Header = styled.div`
     font-weight: 400;
     color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
 
     button{
