@@ -328,7 +328,7 @@ const AttachAssets = styled.div`
 
     ${AssetsButton} {
         width: 40px;
-        margin-left: 5px;
+        margin-left: 2px;
     }
 `;
 
