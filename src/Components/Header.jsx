@@ -4,7 +4,9 @@ const Header = (props) => {
     return (
         <Container>
             <UpSkill>
-                <p>For You</p>
+                <span>
+                    <p>For You</p>
+                </span>
                 <p>Following</p>
             </UpSkill>
         </Container>
@@ -24,6 +26,10 @@ const UpSkill = styled.div`
     display: flex;
     width: 502px;
     background-color: #000;
+
+    span{
+        color: #43f2ff;
+    }
     
     p{
         margin-left: 50px;
